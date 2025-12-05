@@ -1,0 +1,17 @@
+{
+  "name": "emerald-isle-casino-bot",
+  "version": "1.0.0",
+  "description": "Professional Discord bot for Emerald Isle Casino with economy, giveaways, sports betting, and horse racing",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "discord.js": "^14.25.1"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
