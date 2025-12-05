@@ -1,0 +1,105 @@
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.update (/opt/render/project/src/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:354:22)
+    at async handleButton (/opt/render/project/src/src/events/interactionCreate.js:72:5)
+    at async Object.execute (/opt/render/project/src/src/events/interactionCreate.js:39:7)
+Emitted 'error' event on Client instance at:
+    at emitUnhandledRejectionOrErr (node:events:407:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:21) {
+  requestBody: {
+    files: [],
+    json: {
+      type: 7,
+      data: {
+        content: undefined,
+        tts: false,
+        nonce: undefined,
+        enforce_nonce: false,
+        embeds: [
+          {
+            color: 65407,
+            title: 'Emerald Isle Casino ® - 🎉 SORTEO',
+            thumbnail: [Object],
+            timestamp: '2025-12-01T17:21:52.490Z',
+            description: '**¡Participa para ganar!**\n' +
+              '\n' +
+              '🎁 **Premio:** $5.000 EN FICHAS PARA EL CASINO VIRTUAL GRATIS!\n' +
+              '\n' +
+              '👥 **Participantes:** 3\n' +
+              '\n' +
+              '*Haz clic en el botón para participar*',
+            footer: [Object]
+          }
+        ],
+        components: undefined,
+        username: undefined,
+        avatar_url: undefined,
+        allowed_mentions: undefined,
+        flags: undefined,
+        message_reference: undefined,
+        attachments: undefined,
+        sticker_ids: undefined,
+        thread_name: undefined,
+        applied_tags: undefined,
+        poll: undefined
+      }
+    }
+  },
+  rawError: { message: 'Unknown interaction', code: 10062 },
+  code: 10062,
+  status: 404,
+  method: 'POST',
+  url: 'https://discord.com/api/v10/interactions/1445102616190390433/aW50ZXJhY3Rpb246MTQ0NTEwMjYxNjE5MDM5MDQzMzpxU1lKblJQdEk0YjgyWVFFZ0dpU3BnTDhZcGhuMXlHekJGME1FYVBwbE5mVzdXQVp6SjYyaVV4RFJMYUtiTUxlZ1pXYmJwODVGQ2ZUSlFuaTZSR2wxWEhGdnlPWXRNNmJXWkFoQ0dEN2VSODJ3QTh0bDVGaXg1MTZYYnBKQ2FIWA/callback?with_response=false'
+}
+Node.js v20.19.6
+==> Running 'node src/index.js'
+[HTTP] Server started on port 10000
+[Commands] Loaded: ayuda
+[Commands] Loaded: balance
+[Commands] Loaded: blackjack
+[Commands] Loaded: blackjackmesa
+[Commands] Loaded: borrarinsidetrack
+[Commands] Loaded: borrarsorteo
+[Commands] Loaded: cerrarevento
+[Commands] Loaded: cerrarsorteo
+[Commands] Loaded: checkganadores
+[Commands] Loaded: crearevento
+[Commands] Loaded: crearsorteo
+[Commands] Loaded: deportesfondos
+[Commands] Loaded: eliminarevento
+[Commands] Loaded: estadisticas
+[Commands] Loaded: eventos
+[Commands] Loaded: eventoscasino
+[Commands] Loaded: eventosmesa
+[Commands] Loaded: finalizarevento
+[Commands] Loaded: fondos
+[Commands] Loaded: guardar
+[Commands] Loaded: insidefondos
+[Commands] Loaded: insidetrack
+[Commands] Loaded: limpiar
+[Commands] Loaded: pokermesa
+[Commands] Loaded: quitardinero
+[Commands] Loaded: recargar
+[Commands] Loaded: reseteconomia
+[Commands] Loaded: ruletamesa
+[Commands] Loaded: slots
+[Commands] Loaded: startanuncios
+[Commands] Loaded: stopanuncios
+[Commands] Loaded: topganadores
+[Commands] Loaded: transacciones
+[Events] Loaded: interactionCreate
+[Events] Loaded: clientReady
+[Database] Initializing databases...
+[Database] All databases initialized successfully.
+[Bot] Deploying commands...
+[Deploy] Refreshing application commands...
+[Deploy] Successfully registered application commands globally
+[Bot] Logging in...
+[Bot] Logged in as Emerald Isle Casino#2211
+[Bot] Serving 1 servers

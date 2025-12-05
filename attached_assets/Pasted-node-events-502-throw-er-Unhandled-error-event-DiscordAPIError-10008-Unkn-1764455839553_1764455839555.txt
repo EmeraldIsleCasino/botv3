@@ -1,0 +1,63 @@
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+DiscordAPIError[10008]: Unknown Message
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1163:23)
+    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:994:14)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async GuildMessageManager.edit (/home/runner/workspace/node_modules/discord.js/src/managers/MessageManager.js:255:15)
+    at async handleButton (/home/runner/workspace/src/events/interactionCreate.js:550:5)
+    at async Object.execute (/home/runner/workspace/src/events/interactionCreate.js:39:7)
+Emitted 'error' event on Client instance at:
+    at emitUnhandledRejectionOrErr (node:events:407:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:21) {
+  requestBody: {
+    files: [],
+    json: {
+      content: undefined,
+      tts: false,
+      nonce: undefined,
+      enforce_nonce: false,
+      embeds: [
+        {
+          color: 16716947,
+          title: 'Emerald Isle Casino ® - 🎡 RULETA',
+          thumbnail: { url: 'https://i.imgur.com/cx5F2z7.png' },
+          timestamp: '2025-11-29T22:36:49.565Z',
+          description: '👤 <@420412169990176788>\n' +
+            '💰 **Saldo:** $4,290\n' +
+            '💎 **Apuesta:** ⚫ NEGRO\n' +
+            '\n' +
+            '━━━━━━━━━━━━━━━━━\n' +
+            '**SELECCIONA CANTIDAD**'
+        }
+      ],
+      components: [
+        {
+          type: 1,
+          components: [ [Object], [Object], [Object], [Object] ]
+        }
+      ],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: undefined,
+      message_reference: undefined,
+      attachments: undefined,
+      sticker_ids: undefined,
+      thread_name: undefined,
+      applied_tags: undefined,
+      poll: undefined
+    }
+  },
+  rawError: { message: 'Unknown Message', code: 10008 },
+  code: 10008,
+  status: 404,
+  method: 'PATCH',
+  url: 'https://discord.com/api/v10/channels/1444443168161398855/messages/1444457086170824725'
+}
+
+Node.js v20.19.3

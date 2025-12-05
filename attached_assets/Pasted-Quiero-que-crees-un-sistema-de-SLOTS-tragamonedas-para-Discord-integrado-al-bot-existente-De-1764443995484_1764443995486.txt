@@ -1,0 +1,152 @@
+Quiero que crees un **sistema de SLOTS (tragamonedas)** para Discord, integrado al bot existente. Debe seguir la misma estructura de mis sistemas previos (giveaways, apuestas deportivas, inside track y economía), usando:
+
+* Discord.js v14
+* SQLite
+* Embeds atractivos
+* Botones interactivos
+* Auto-actualización visual (ediciones del mensaje del embed)
+* Resultados animados
+
+## 🟩 **REQUISITOS GENERALES**
+
+### 1. **Comando principal:**
+
+`/slots` — abre el menú de juegos disponibles.
+
+### 2. **Menú inicial con botones:**
+
+Debe mostrar **3–7 juegos de slots** con nombres dinámicos, por ejemplo:
+
+* 🌋 *Volcano Riches*
+* 🐉 *Dragon’s Fortune*
+* 🍀 *Lucky Emerald*
+* 👑 *Royal Spins*
+* 💎 *Diamond Storm*
+* 🎡 *Vegas Rush*
+* 🧨 *Boom Boom Jackpots*
+
+Cada juego tiene **emojis distintos** para los carretes, simulando estilos visuales completamente diferentes.
+
+### 3. **Apuesta ajustable con botones:**
+
+Debes permitir:
+
+* ➕ aumentar apuesta
+* ➖ disminuir apuesta
+* 🎰 girar
+* 🔙 volver al menú de juegos
+
+### 4. **Estética premium:**
+
+Los embeds deben ser estilo casino:
+
+* Verde esmeralda / fucsia / dorado 
+* Títulos grandes
+* Bordes de emojis animando la vista
+* Diseñado para ser “atractivo” y de lujo
+
+---
+
+## 🟨 **FUNCIONALIDADES DEL SISTEMA DE SLOTS**
+
+### 🔸 Animación del giro (obligatoria)
+
+Cada giro debe mostrar:
+
+1. **Embed 1:** “Girando…” con carretes ocultos (ej: ❓❓❓)
+2. **Embed 2:** primer carrete revelado
+3. **Embed 3:** segundo carrete revelado
+4. **Embed 4:** resultado final
+
+*Todo con delay realistas (200–350 ms por reveal).*
+
+### 🔸 Base del sistema
+
+* SQLite database: `slots.db`
+* Tabla: `user_balance` (compatible con sistema económico existente)
+* Cada giro descuenta la apuesta
+* Si el usuario gana, debe acreditar el premio
+
+### 🔸 Tipos de combinaciones y premios
+
+1. **Triple coincidencia:** X15
+2. **Doble coincidencia:** X3
+3. **Jackpot (símbolo raro):** X50
+4. **Pérdida:** 0
+
+### 🔸 Probabilidades configurables
+
+Debes incluir un sistema interno de probabilidades ajustables por juego:
+
+* probabilidad de jackpot
+* probabilidad triple
+* probabilidades de símbolos
+
+Cada juego tiene **su propia tabla de símbolos y probabilidades**.
+
+---
+
+## 🟧 **MÚLTIPLES JUEGOS CON TEMÁTICAS**
+
+Cada juego debe tener:
+
+* Lista propia de emojis (mínimo 5)
+* Color del embed distinto
+* Nombre distinto
+* Multiplicadores propios (pueden variar entre juegos)
+
+Ejemplo:
+
+### 🍀 Lucky Emerald
+
+Símbolos: 🍀 💚 🪙 💎 ⭐
+Jackpot: 🍀 (1% chance)
+
+### 🐉 Dragon’s Fortune
+
+Símbolos: 🐉 🔥 💠 🎴 💰
+Jackpot: 🐉 (0.6% chance)
+
+### 👑 Royal Spins
+
+Símbolos: 👑 💎 💰 🍷 🎩
+Jackpot: 👑 (0.3% chance)
+
+---
+
+## 🟥 **CONTROL DE ERRORES**
+
+El sistema debe:
+
+* Evitar que usuarios apuesten más balance del que tienen
+* Bloquear spams (cooldown de 2–4 segundos)
+* Cancelar interacciones si el mensaje expira
+* Reemplazar respuestas del usuario por solo un embed (como mis sistemas previos)
+
+---
+
+## 🟦 **REQUISITOS TÉCNICOS IMPORTANTES**
+
+1. El bot **NO puede mostrar** el mensaje del usuario, solo el embed.
+2. El sistema debe actualizar solo el mensaje del embed mediante `.edit()`.
+3. Debe ser totalmente modular, en archivos separados:
+
+   * `/commands/slots.js`
+   * `/systems/slots/slotsManager.js`
+   * `/systems/slots/games/*.js`
+   * `/databases/slots.db`
+4. Todo debe autoguardarse y no crashear si el bot reinicia.
+5. No usar menus select; solo **botones**.
+
+---
+
+## 💠 **RESULTADO ESPERADO**
+
+Un sistema de slots completo que:
+
+* Sea visualmente impresionante
+* Tenga animaciones suaves
+* Incluya varios juegos temáticos
+* Use botones como los sistemas anteriores
+* Sea 100% compatible con la economía del bot
+* No muestre mensajes del usuario

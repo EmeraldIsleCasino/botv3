@@ -1,0 +1,207 @@
+Perfecto, aquí tienes el **prompt FINAL**, completamente pulido, con la nueva condición:
+**todos los comandos ejecutados deben responder únicamente con un embed y borrar/ocultar el mensaje del usuario que ejecuta el comando**, dejando el canal limpio y profesional.
+
+Este es el texto final, listo para copiar/pegar en la IA que desarrollará el bot:
+
+---
+
+# ✅ **PROMPT FINAL DEFINITIVO PARA LA IA (VERSIÓN TOTALMENTE COMPLETA)**
+
+Quiero que desarrolles un bot de Discord profesional para **Emerald Isle Casino ®**, con sistemas completos de economía, sorteos, apuestas deportivas e Inside Track.
+Todos los comandos deben ser **exclusivos para administradores**, y los usuarios solo interactúan mediante **botones en embeds temáticos** (sin comandos).
+
+**Título en todos los embeds:** *Emerald Isle Casino ®*
+**Logo oficial:** [https://i.imgur.com/cx5F2z7.png](https://i.imgur.com/cx5F2z7.png)
+
+Toda la información sensible (economía, apuestas, registros internos, ganancias, movimientos) debe ser **privada solo para administradores**.
+
+Todos los datos deben almacenarse en **bases de datos independientes** por sistema.
+
+---
+
+# 🟩 **REGLA GLOBAL DE RESPUESTA DEL BOT**
+
+### ✔️ Cada vez que se ejecute un comando administrativo:
+
+* El bot **solo debe enviar un embed** como respuesta.
+* No debe quedar visible el mensaje del usuario que escribió el comando.
+* Esto se logra borrando el mensaje, utilizando deferReply ephemeral o cualquier método según la librería.
+* El canal queda limpio y solo aparece el embed final del bot.
+
+Ejemplo del proceso:
+
+1. Admin ejecuta `/crearsorteo`
+2. El mensaje del comando se oculta/borrado automáticamente
+3. El bot publica únicamente el embed correspondiente
+
+---
+
+# 🟢 **FUNCIONES GLOBALES DEL BOT**
+
+### 🟣 Autoping (Autoguardado automático)
+
+* Guarda todas las bases de datos cada X segundos (default 60s).
+* Sin enviar mensajes, solo registro en consola:
+  **"[Autoping] Bases de datos guardadas correctamente."**
+
+### 🔵 /guardar
+
+* Guarda manualmente **todas** las bases de datos.
+* Solo muestra un embed de confirmación (y oculta el mensaje del admin que ejecuta el comando).
+
+---
+
+# 🟩 **1. SISTEMA DE ECONOMÍA (CON FONDOS INTERNOS DE LA CASA)**
+
+### **/recargar**
+
+* Suma saldo a un usuario.
+* Registra el movimiento en DB.
+* Responde solo con embed.
+* Guardado automático.
+
+### **/quitardinero**
+
+* Resta saldo.
+* Responde con embed.
+* Guardado automático.
+
+### **/balance**
+
+* Muestra el balance del usuario en embed (privado/ephemeral).
+
+### **/fondos**
+
+* Embed privado solo para admins con:
+
+  * Balances individuales
+  * Total en circulación
+
+### **/insidefondos**
+
+Embed privado con:
+
+* Total de apuestas realizadas en Inside Track
+* Ganancias netas de la casa
+* Pérdidas de la casa
+* Balance final del sistema
+
+### **/deportesfondos**
+
+Embed privado con:
+
+* Total apostado en eventos deportivos
+* Ganancias de la casa
+* Pérdidas pagadas
+* Balance final
+
+Todos estos datos deben actualizarse automáticamente.
+
+---
+
+# 🟩 **2. SISTEMA DE SORTEOS**
+
+### **/crearsorteo**
+
+* Embed con botón **Participar**.
+* Lista dinámica de participantes.
+* Responder solo con embed y borrar comando.
+
+### **/cerrarsorteo**
+
+* Cerrado del sorteo.
+* Cuenta regresiva 10s.
+* Ganador anunciado en embed.
+* Guardado automático.
+
+### **/borrarsorteo**
+
+* Elimina el sorteo activo.
+
+### **/topganadores**
+
+* Embed privado con top de ganadores.
+
+---
+
+# 🟩 **3. SISTEMA DE APUESTAS DEPORTIVAS**
+
+### Configurable:
+
+* Título
+* Logos
+* Nombres
+* Cuotas
+
+### **/crearevento**
+
+* Embed visual con botones de apuesta.
+* Registrar apuestas.
+
+### **/cerrarevento**
+
+* Cierra apuestas.
+
+### **/finalizarevento**
+
+* Mostrar ganadores en embed (sin cifras).
+* Pagar internamente a usuarios ganadores.
+* Actualizar automáticamente los fondos de la casa.
+* Registrar evento en historial privado.
+
+### **/eliminarevento**
+
+* Elimina evento + apuestas asociadas.
+
+---
+
+# 🟩 **4. SISTEMA INSIDE TRACK – CARRERAS DE CABALLOS**
+
+### **/insidetrack**
+
+* Generar carrera con **5 caballos aleatorios**.
+* Embed con botones para apostar.
+* Registrar apuestas por usuario.
+* Simulación de carrera con emojis durante **15 segundos**.
+* Embed que se actualiza con narración:
+
+  * Cambios de posición
+  * Suspenso
+  * Últimos metros
+
+### **Final de la carrera**
+
+* Mostrar ganador en embed público.
+* Crear embed privado para admins con:
+
+  * Lista de ganadores
+  * Montos apostados
+  * Cuánto ganó cada uno
+* Sumar dinero automáticamente a cuentas de usuarios ganadores.
+* Actualizar registros de **/insidefondos** (ganancias/pérdidas de la casa).
+
+### **/borrarinsidetrack**
+
+* Elimina la carrera activa.
+
+---
+
+# 🟩 **REQUISITOS GENERALES**
+
+* Código modular, seguro y escalable.
+* Embeds con estética premium de **Emerald Isle Casino®**.
+* Todas las respuestas siempre deben ser **embeds**, nunca mensajes de texto simples.
+* Todos los mensajes de comandos deben ocultarse o borrarse.
+* Toda información económica interna siempre es privada.
+* Usuarios comunes solo ven:
+
+  * Embeds públicos (sin cifras sensibles)
+  * Botones para participar
+
+---
+
+Si quieres, puedo entregarte ahora también:
+✅ La estructura de carpetas del bot
+✅ Diseños de embeds listos para pegar
+✅ Bases de datos (JSON, MongoDB o SQL)
+✅ Código base listo para compilar en Node.js o Python

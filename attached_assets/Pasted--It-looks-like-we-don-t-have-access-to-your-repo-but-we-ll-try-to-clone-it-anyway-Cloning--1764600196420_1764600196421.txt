@@ -1,0 +1,251 @@
+==> It looks like we don't have access to your repo, but we'll try to clone it anyway.
+==> Cloning from https://github.com/EmeraldIsleCasino/emerald-casino-bot
+==> Checking out commit faf2bfaadeda095babba108f32451afbcd3a79ea in branch main
+==> Requesting Node.js version 20.x
+==> Using Node.js version 20.19.6 via /opt/render/project/src/package.json
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+==> Running build command 'npm install'...
+added 63 packages, and audited 64 packages in 4s
+16 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+==> Uploading build...
+==> Uploaded in 3.3s. Compression took 1.2s
+==> Build successful 🎉
+==> Deploying...
+==> Running 'node src/index.js'
+[Commands] Loaded: ayuda
+[Commands] Loaded: balance
+[Commands] Loaded: blackjack
+[Commands] Loaded: blackjackmesa
+[Commands] Loaded: borrarinsidetrack
+[Commands] Loaded: borrarsorteo
+[Commands] Loaded: cerrarevento
+[Commands] Loaded: cerrarsorteo
+[Commands] Loaded: checkganadores
+[Commands] Loaded: crearevento
+[Commands] Loaded: crearsorteo
+[Commands] Loaded: deportesfondos
+[Commands] Loaded: eliminarevento
+[Commands] Loaded: estadisticas
+[Commands] Loaded: eventos
+[Commands] Loaded: eventoscasino
+[Commands] Loaded: eventosmesa
+[Commands] Loaded: finalizarevento
+[Commands] Loaded: fondos
+[Commands] Loaded: guardar
+[Commands] Loaded: insidefondos
+[Commands] Loaded: insidetrack
+[Commands] Loaded: limpiar
+[Commands] Loaded: pokermesa
+[Commands] Loaded: quitardinero
+[Commands] Loaded: recargar
+[Commands] Loaded: reseteconomia
+[Commands] Loaded: ruletamesa
+[Commands] Loaded: slots
+[Commands] Loaded: startanuncios
+[Commands] Loaded: stopanuncios
+[Commands] Loaded: topganadores
+[Commands] Loaded: transacciones
+[Events] Loaded: interactionCreate
+[Events] Loaded: clientReady
+[Database] Initializing databases...
+[Database] All databases initialized successfully.
+[Bot] Deploying commands...
+[Deploy] Refreshing application commands...
+[Deploy] Successfully registered application commands globally
+[Bot] Logging in...
+[Bot] Logged in as Emerald Isle Casino#2211
+[Bot] Serving 1 servers
+[Autoping] Auto-save configured every 60 seconds
+==> No open ports detected, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+Error executing insidetrack: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.deferReply (/opt/render/project/src/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:122:22)
+    at async Object.execute (/opt/render/project/src/src/commands/insidetrack.js:33:5)
+    at async Object.execute (/opt/render/project/src/src/events/interactionCreate.js:25:9) {
+  requestBody: { files: undefined, json: { type: 5, data: [Object] } },
+  rawError: { message: 'Unknown interaction', code: 10062 },
+  code: 10062,
+  status: 404,
+  method: 'POST',
+  url: 'https://discord.com/api/v10/interactions/1445062480463134863/aW50ZXJhY3Rpb246MTQ0NTA2MjQ4MDQ2MzEzNDg2MzpmMUVSeHU2NnRpaHBuY056a3hBNzJPYjFFQnhUYnBWeXFtMFdaUzJTMno4R1VhWHdRVm9aaHg0c0lxclZqVEVIUHptOUFxaVVpZjFJR1JCRUc2eXFVQUUwTkJtOHlYSWFtOVIyczlBc2RialJtZGIwTlVVQ3c4b20xQnNjeG1EaA/callback?with_response=false'
+}
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/opt/render/project/src/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)
+    at async Object.execute (/opt/render/project/src/src/events/interactionCreate.js:32:11)
+Emitted 'error' event on Client instance at:
+    at emitUnhandledRejectionOrErr (node:events:407:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:21) {
+  requestBody: {
+    files: [],
+    json: {
+      type: 4,
+      data: {
+        content: undefined,
+        tts: false,
+        nonce: undefined,
+        enforce_nonce: false,
+        embeds: [
+          {
+            color: 16711680,
+            title: 'Emerald Isle Casino ®',
+            thumbnail: [Object],
+            timestamp: '2025-12-01T14:42:23.538Z',
+            description: '❌ Ocurrió un error al ejecutar este comando.',
+            footer: [Object]
+          }
+        ],
+        components: undefined,
+        username: undefined,
+        avatar_url: undefined,
+        allowed_mentions: undefined,
+        flags: 64,
+        message_reference: undefined,
+        attachments: undefined,
+        sticker_ids: undefined,
+        thread_name: undefined,
+        applied_tags: undefined,
+        poll: undefined
+      }
+    }
+  },
+  rawError: {
+    message: 'Interaction has already been acknowledged.',
+    code: 40060
+  },
+  code: 40060,
+  status: 400,
+  method: 'POST',
+  url: 'https://discord.com/api/v10/interactions/1445062480463134863/aW50ZXJhY3Rpb246MTQ0NTA2MjQ4MDQ2MzEzNDg2MzpmMUVSeHU2NnRpaHBuY056a3hBNzJPYjFFQnhUYnBWeXFtMFdaUzJTMno4R1VhWHdRVm9aaHg0c0lxclZqVEVIUHptOUFxaVVpZjFJR1JCRUc2eXFVQUUwTkJtOHlYSWFtOVIyczlBc2RialJtZGIwTlVVQ3c4b20xQnNjeG1EaA/callback?with_response=false'
+}
+Node.js v20.19.6
+==> Exited with status 1
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+==> Running 'node src/index.js'
+[Commands] Loaded: ayuda
+[Commands] Loaded: balance
+[Commands] Loaded: blackjack
+[Commands] Loaded: blackjackmesa
+[Commands] Loaded: borrarinsidetrack
+[Commands] Loaded: borrarsorteo
+[Commands] Loaded: cerrarevento
+[Commands] Loaded: cerrarsorteo
+[Commands] Loaded: checkganadores
+[Commands] Loaded: crearevento
+[Commands] Loaded: crearsorteo
+[Commands] Loaded: deportesfondos
+[Commands] Loaded: eliminarevento
+[Commands] Loaded: estadisticas
+[Commands] Loaded: eventos
+[Commands] Loaded: eventoscasino
+[Commands] Loaded: eventosmesa
+[Commands] Loaded: finalizarevento
+[Commands] Loaded: fondos
+[Commands] Loaded: guardar
+[Commands] Loaded: insidefondos
+[Commands] Loaded: insidetrack
+[Commands] Loaded: limpiar
+[Commands] Loaded: pokermesa
+[Commands] Loaded: quitardinero
+[Commands] Loaded: recargar
+[Commands] Loaded: reseteconomia
+[Commands] Loaded: ruletamesa
+[Commands] Loaded: slots
+[Commands] Loaded: startanuncios
+[Commands] Loaded: stopanuncios
+[Commands] Loaded: topganadores
+[Commands] Loaded: transacciones
+[Events] Loaded: interactionCreate
+[Events] Loaded: clientReady
+[Database] Initializing databases...
+[Database] All databases initialized successfully.
+[Bot] Deploying commands...
+[Deploy] Refreshing application commands...
+[Deploy] Successfully registered application commands globally
+[Bot] Logging in...
+[Bot] Logged in as Emerald Isle Casino#2211
+[Bot] Serving 1 servers
+[Autoping] Auto-save configured every 60 seconds
+Error executing eventoscasino: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.deferReply (/opt/render/project/src/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:122:22)
+    at async Object.execute (/opt/render/project/src/src/commands/eventoscasino.js:83:5)
+    at async Object.execute (/opt/render/project/src/src/events/interactionCreate.js:25:9) {
+  requestBody: { files: undefined, json: { type: 5, data: [Object] } },
+  rawError: { message: 'Unknown interaction', code: 10062 },
+  code: 10062,
+  status: 404,
+  method: 'POST',
+  url: 'https://discord.com/api/v10/interactions/1445062542773846199/aW50ZXJhY3Rpb246MTQ0NTA2MjU0Mjc3Mzg0NjE5OTphOEMxUVNQaVFMMTVISHFMMnNseVR4Y3pCSkFvRmdJdFRqNGJ6Rnc1Q016TjJzR0ZJSkYxaVZ5cmJSWlU5UTVQNE1MSGkxMktzRUd6cUppSmduSUVualV0R0xWOXl2WHczNmRIandzOVYxTjYwWkV2NWMwbTBKQnduV3JmaFVFVA/callback?with_response=false'
+}
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/opt/render/project/src/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/opt/render/project/src/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:193:22)
+    at async Object.execute (/opt/render/project/src/src/events/interactionCreate.js:32:11)
+Emitted 'error' event on Client instance at:
+    at emitUnhandledRejectionOrErr (node:events:407:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:21) {
+  requestBody: {
+    files: [],
+    json: {
+      type: 4,
+      data: {
+        content: undefined,
+        tts: false,
+        nonce: undefined,
+        enforce_nonce: false,
+        embeds: [
+          {
+            color: 16711680,
+            title: 'Emerald Isle Casino ®',
+            thumbnail: [Object],
+            timestamp: '2025-12-01T14:42:38.390Z',
+            description: '❌ Ocurrió un error al ejecutar este comando.',
+            footer: [Object]
+          }
+        ],
+        components: undefined,
+        username: undefined,
+        avatar_url: undefined,
+        allowed_mentions: undefined,
+        flags: 64,
+        message_reference: undefined,
+        attachments: undefined,
+        sticker_ids: undefined,
+        thread_name: undefined,
+        applied_tags: undefined,
+        poll: undefined
+      }
+    }
+  },
+  rawError: {
+    message: 'Interaction has already been acknowledged.',
+    code: 40060
+  },
+  code: 40060,
+  status: 400,
+  method: 'POST',
+  url: 'https://discord.com/api/v10/interactions/1445062542773846199/aW50ZXJhY3Rpb246MTQ0NTA2MjU0Mjc3Mzg0NjE5OTphOEMxUVNQaVFMMTVISHFMMnNseVR4Y3pCSkFvRmdJdFRqNGJ6Rnc1Q016TjJzR0ZJSkYxaVZ5cmJSWlU5UTVQNE1MSGkxMktzRUd6cUppSmduSUVualV0R0xWOXl2WHczNmRIandzOVYxTjYwWkV2NWMwbTBKQnduV3JmaFVFVA/callback?with_response=false'
+}
+Node.js v20.19.6

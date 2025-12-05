@@ -1,0 +1,126 @@
+
+Search
+
+Live tail
+GMT-5
+
+Menu
+
+     ==> Deploying...
+==> Running 'node src/index.js'
+[Commands] Loaded: ayuda
+[Commands] Loaded: balance
+[Commands] Loaded: blackjack
+[Commands] Loaded: blackjackmesa
+[Commands] Loaded: borrarinsidetrack
+[Commands] Loaded: borrarsorteo
+[Commands] Loaded: cerrarevento
+[Commands] Loaded: cerrarsorteo
+[Commands] Loaded: checkganadores
+[Commands] Loaded: crearevento
+[Commands] Loaded: crearsorteo
+[Commands] Loaded: deportesfondos
+[Commands] Loaded: eliminarevento
+[Commands] Loaded: estadisticas
+[Commands] Loaded: eventos
+[Commands] Loaded: eventoscasino
+[Commands] Loaded: eventosmesa
+[Commands] Loaded: finalizarevento
+[Commands] Loaded: fondos
+[Commands] Loaded: guardar
+[Commands] Loaded: insidefondos
+[Commands] Loaded: insidetrack
+[Commands] Loaded: limpiar
+[Commands] Loaded: pokermesa
+[Commands] Loaded: quitardinero
+[Commands] Loaded: recargar
+[Commands] Loaded: reseteconomia
+[Commands] Loaded: ruletamesa
+[Commands] Loaded: slots
+[Commands] Loaded: startanuncios
+[Commands] Loaded: stopanuncios
+[Commands] Loaded: topganadores
+[Commands] Loaded: transacciones
+[Events] Loaded: interactionCreate
+[Events] Loaded: clientReady
+[Database] Initializing databases...
+[Database] All databases initialized successfully.
+[Bot] Deploying commands...
+[Deploy] Refreshing application commands...
+[Deploy] Successfully registered application commands globally
+[Bot] Logging in...
+[Bot] Logged in as Emerald Isle Casino#2211
+[Bot] Serving 1 servers
+[Autoping] Auto-save configured every 60 seconds
+     ==> No open ports detected, continuing to scan...
+     ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+[Autoping] Bases de datos guardadas correctamente.
+     ==> No open ports detected, continuing to scan...
+     ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+[Autoping] Bases de datos guardadas correctamente.
+     ==> No open ports detected, continuing to scan...
+[Autoping] Bases de datos guardadas correctamente.
+     ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+[Autoping] Bases de datos guardadas correctamente.
+     ==> No open ports detected, continuing to scan...
+     ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+     ==> Port scan timeout reached, no open ports detected. Bind your service to at least one port. If you don't need to receive traffic on any port, create a background worker instead.
+     ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+[Autoping] Bases de datos guardadas correctamente.
+     ==> Timed out: Port scan timeout reached, no open ports detected. Bind your service to at least one port. If you don't need to receive traffic on any port, create a background worker instead.
+     ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+[Autoping] Bases de datos guardadas correctamente.
+==> Running 'node src/index.js'
+[Commands] Loaded: ayuda
+[Commands] Loaded: balance
+[Commands] Loaded: blackjack
+[Commands] Loaded: blackjackmesa
+[Commands] Loaded: borrarinsidetrack
+[Commands] Loaded: borrarsorteo
+[Commands] Loaded: cerrarevento
+[Commands] Loaded: cerrarsorteo
+[Commands] Loaded: checkganadores
+[Commands] Loaded: crearevento
+[Commands] Loaded: crearsorteo
+[Commands] Loaded: deportesfondos
+[Commands] Loaded: eliminarevento
+[Commands] Loaded: estadisticas
+[Commands] Loaded: eventos
+[Commands] Loaded: eventoscasino
+[Commands] Loaded: eventosmesa
+[Commands] Loaded: finalizarevento
+[Commands] Loaded: fondos
+[Commands] Loaded: guardar
+[Commands] Loaded: insidefondos
+[Commands] Loaded: insidetrack
+[Commands] Loaded: limpiar
+[Commands] Loaded: pokermesa
+[Commands] Loaded: quitardinero
+[Commands] Loaded: recargar
+[Commands] Loaded: reseteconomia
+[Commands] Loaded: ruletamesa
+[Commands] Loaded: slots
+[Commands] Loaded: startanuncios
+[Commands] Loaded: stopanuncios
+[Commands] Loaded: topganadores
+[Commands] Loaded: transacciones
+[Events] Loaded: interactionCreate
+[Events] Loaded: clientReady
+[Database] Initializing databases...
+[Database] All databases initialized successfully.
+[Bot] Deploying commands...
+[Deploy] Refreshing application commands...
+[Deploy] Successfully registered application commands globally
+[Bot] Logging in...
+[Bot] Logged in as Emerald Isle Casino#2211
+[Bot] Serving 1 servers
+[Autoping] Auto-save configured every 60 seconds

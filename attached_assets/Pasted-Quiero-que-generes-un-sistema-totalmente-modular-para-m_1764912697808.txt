@@ -1,0 +1,240 @@
+Quiero que generes un sistema **totalmente modular** para mi bot de casino en Discord.js v14.
+
+No debes modificar ni romper ningún archivo del bot actual.
+Todo se creará por separado en nuevas carpetas.
+
+---
+
+# 📌 **1. MENÚ ÚNICO DE MINIJUEGOS (embed principal)**
+
+Debes crear:
+
+### 📁 `/minigames/menumaster/`
+
+* Comando `/minijuegos`
+* Embed único, fijo y permanente
+* Lista de juegos con iconos
+* Botones individuales para cada juego
+* No usa selects, solo botones
+
+El embed debe tener:
+
+**Título:** 🎮 Minijuegos del Emerald Isle Casino
+**Descripción:**
+
+> ¡Selecciona cualquier juego para abrir tu sala privada!
+> Tus partidas son únicas, persistentes y sin spam en el canal público.
+
+**Listado de juegos displayed así:**
+
+```
+💣 Minas  
+💰 Jackpot Rooms  
+⚔️ Arena Duel  
+🏎️ Nahcar Crash  
+🥊 Boxing Los Santos  
+⚽ Penalty Shoot-out  
+🎡 Wheel Xtreme  
+🔫 Bank Heist  
+🦆 Duck Race  
+🗼 Tower
+```
+
+Botones:
+
+* `btn_mines`
+* `btn_jackpot`
+* `btn_duel`
+* `btn_crash`
+* `btn_boxing`
+* `btn_penalty`
+* `btn_wheel`
+* `btn_heist`
+* `btn_duck`
+* `btn_tower`
+
+**Cuando un usuario presiona un botón:**
+
+1. El bot crea o recupera **su embed privado**
+2. Ese embed es siempre el mismo (persistente)
+3. Se actualiza según la acción
+4. Nunca envía mensajes múltiples
+5. Todo se maneja con **componentes y edits**, no mensajes nuevos
+6. Si el juego es PvP, deberá esperar a que el otro jugador se una a SU sala, no al canal público
+
+---
+
+# 📌 **2. CADA JUEGO TIENE SU SISTEMA DEDICADO**
+
+Todos los minijuegos van en carpetas independientes:
+
+```
+/minigames/mines
+/minigames/jackpot_rooms
+/minigames/arena_duel
+/minigames/nahcar_crash
+/minigames/boxing_ls
+/minigames/penalty_shootout
+/minigames/wheel_xtreme
+/minigames/bank_heist
+/minigames/duck_race
+/minigames/tower
+```
+
+Cada carpeta debe incluir:
+
+* handler del botón propio (`btn_mines.js`, etc.)
+* archivo de estado del jugador
+* modelos de DB independientes
+* funciones internas completas
+* embed privado del jugador
+* botones propios del juego
+* lógica del juego 100% modular
+
+---
+
+# 📌 **3. JUEGOS QUE DEBES IMPLEMENTAR**
+
+Los sistemas deben crearse completos:
+
+### **💣 MINES (Stake style)**
+
+* Grid 5x5
+* Minas escondidas
+* Cashout
+* Apuesta inicial
+* Persistencia por jugador
+
+### **💰 JACKPOT ROOMS**
+
+* Salas Small, Medium, High
+* RNG proporcional
+* Timer
+* Ganador animado
+
+### **⚔️ ARENA DUEL (PvP)**
+
+* Vida, daño crítico, esquiva
+* Turnos alternos
+* Barra de vida animada
+* Apuestas vs otro jugador
+
+### **🏎️ NAHCAR CRASH**
+
+* Carrera RNG
+* Eventos aleatorios
+* Nitro, crash, turbo
+* Tres posiciones finales
+
+### **🥊 BOXING LOS SANTOS (PvP)**
+
+* Golpes: Jab, Hook, Bloqueo
+* Stamina
+* KO
+* Apuestas
+
+### **⚽ PENALTY SHOOT-OUT**
+
+* Elegir dirección
+* Portero RNG
+* 5 rondas
+* Shootout final si empatan
+
+### **🎡 WHEEL XTREME**
+
+* 20 sectores
+* Multiplicadores variables
+* Animación tipo rueda
+
+### **🔫 BANK HEIST**
+
+* Roles: Hacker, Conductor, Líder, Tirador
+* Eventos aleatorios
+* % de éxito
+* Reparto de ganancias
+
+### **🦆 DUCK RACE**
+
+* 6 patos animados
+* Progreso por barras
+* Obstáculos
+* Apuestas
+
+### **🗼 TOWER (Subida de pisos)**
+
+* Cada piso multiplica
+* Riesgo creciente
+* Elegir subir o cobrar
+* RNG oculto
+
+---
+
+# 📌 **4. SISTEMA DE NFT SIMPLIFICADO**
+
+Debe crearse en rutas:
+
+```
+/nfts/system
+/nfts/cards
+/nfts/commands
+```
+
+El sistema debe incluir:
+
+### ✔ Inventario del usuario
+
+### ✔ Cartas NFT desbloqueables al jugar minijuegos o comprar en la tienda (debe tener tienda y sistema para que los compradores puedan ver sus items raros, también debe tener comando administrativo para ver a dueños de nft's, comando admin para ajustar precios de cada nft, comando admin para agregar/eliminar nfts, comando admin para ver nfts existentes) 
+
+### ✔ Rarezas:
+
+* Común
+* Raro
+* Épico
+* Legendario
+* Mythic
+
+### ✔ Drop rates integrados en todos los minijuegos
+
+### ✔ Bonus equilibrados según carta
+
+### ✔ Un único "NFT activo" por usuario
+
+### ✔ Comandos:
+
+* `/mynfts`
+* `/nftinfo`
+* `/equipnft`
+
+---
+
+# 📌 **5. REGLAS OBLIGATORIAS**
+
+* **NO modifiques ningún archivo actual del bot**
+* **NO cambies mi sistema de economía**
+* **NO alteres mis bases de datos existentes**
+* **NO cambies mis handlers**
+* Crea todos los juegos como **módulos completamente nuevos**
+* Reusa mis funciones existentes sin alterarlas
+* Todo debe conectarse a la economía con mis métodos actuales
+* Cada juego debe usar su propia collection independiente
+
+---
+
+# 📌 **6. ENTREGA**
+
+Debes entregar:
+
+* Todos los archivos completos
+* Comandos listos
+* Eventos
+* Botones
+* Modelos de DB
+* Rutas completas
+* Funciones
+* Embeds privados y globales
+* Lógica lista para ejecutar
+
+Si ves necesario añadir algún sistema, juego o algo extra hazlo y actualizame todo el ayuda y documentacion.
+
+
+No te detengas hasta asegurarte de que todo funcione correctamente y el bot no arroje ningún error al usar lo nuevo. 

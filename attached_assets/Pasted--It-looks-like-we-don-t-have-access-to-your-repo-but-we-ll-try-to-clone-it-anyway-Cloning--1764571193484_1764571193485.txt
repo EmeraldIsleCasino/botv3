@@ -1,0 +1,115 @@
+==> It looks like we don't have access to your repo, but we'll try to clone it anyway.
+==> Cloning from https://github.com/EmeraldIsleCasino/emerald-casino-bot
+==> Checking out commit 44764d32ba57488a220b8b0d3576ba52b4381835 in branch main
+==> Requesting Node.js version 20.x
+==> Using Node.js version 20.19.6 via /opt/render/project/src/package.json
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+==> Running build command 'yarn install'...
+yarn install v1.22.22
+warning package.json: No license field
+info No lockfile found.
+warning emerald-isle-casino-bot@1.0.0: No license field
+[1/5] Validating package.json...
+warning emerald-isle-casino-bot@1.0.0: No license field
+[2/5] Resolving packages...
+[3/5] Fetching packages...
+[4/5] Linking dependencies...
+warning Workspaces can only be enabled in private projects.
+warning Workspaces can only be enabled in private projects.
+warning Workspaces can only be enabled in private projects.
+warning Workspaces can only be enabled in private projects.
+warning Workspaces can only be enabled in private projects.
+warning Workspaces can only be enabled in private projects.
+[5/5] Building fresh packages...
+success Saved lockfile.
+Done in 3.46s.
+==> Uploading build...
+==> Uploaded in 3.4s. Compression took 1.0s
+==> Build successful 🎉
+==> Deploying...
+==> Running 'node src/index.js'
+[Commands] Loaded: ayuda
+[Commands] Loaded: balance
+[Commands] Loaded: blackjack
+[Commands] Loaded: blackjackmesa
+[Commands] Loaded: borrarinsidetrack
+[Commands] Loaded: borrarsorteo
+[Commands] Loaded: cerrarevento
+[Commands] Loaded: cerrarsorteo
+[Commands] Loaded: checkganadores
+[Commands] Loaded: crearevento
+[Commands] Loaded: crearsorteo
+[Commands] Loaded: deportesfondos
+[Commands] Loaded: eliminarevento
+[Commands] Loaded: estadisticas
+[Commands] Loaded: eventos
+[Commands] Loaded: eventoscasino
+[Commands] Loaded: eventosmesa
+[Commands] Loaded: finalizarevento
+[Commands] Loaded: fondos
+[Commands] Loaded: guardar
+[Commands] Loaded: insidefondos
+[Commands] Loaded: insidetrack
+[Commands] Loaded: limpiar
+[Commands] Loaded: pokermesa
+[Commands] Loaded: quitardinero
+[Commands] Loaded: recargar
+[Commands] Loaded: reseteconomia
+[Commands] Loaded: ruletamesa
+[Commands] Loaded: slots
+[Commands] Loaded: startanuncios
+[Commands] Loaded: stopanuncios
+[Commands] Loaded: topganadores
+[Commands] Loaded: transacciones
+[Events] Loaded: interactionCreate
+[Events] Loaded: clientReady
+[Error] DISCORD_BOT_TOKEN not found
+[Info] Please set the DISCORD_BOT_TOKEN secret in Replit
+[Info] 1. Go to Discord Developer Portal: https://discord.com/developers/applications
+[Info] 2. Create or select your application
+[Info] 3. Go to Bot section and copy the token
+[Info] 4. Add it as a secret named DISCORD_BOT_TOKEN in Replit
+==> Exited with status 1
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+==> Running 'node src/index.js'
+[Commands] Loaded: ayuda
+[Commands] Loaded: balance
+[Commands] Loaded: blackjack
+[Commands] Loaded: blackjackmesa
+[Commands] Loaded: borrarinsidetrack
+[Commands] Loaded: borrarsorteo
+[Commands] Loaded: cerrarevento
+[Commands] Loaded: cerrarsorteo
+[Commands] Loaded: checkganadores
+[Commands] Loaded: crearevento
+[Commands] Loaded: crearsorteo
+[Commands] Loaded: deportesfondos
+[Commands] Loaded: eliminarevento
+[Commands] Loaded: estadisticas
+[Commands] Loaded: eventos
+[Commands] Loaded: eventoscasino
+[Commands] Loaded: eventosmesa
+[Commands] Loaded: finalizarevento
+[Commands] Loaded: fondos
+[Commands] Loaded: guardar
+[Commands] Loaded: insidefondos
+[Commands] Loaded: insidetrack
+[Commands] Loaded: limpiar
+[Commands] Loaded: pokermesa
+[Commands] Loaded: quitardinero
+[Commands] Loaded: recargar
+[Commands] Loaded: reseteconomia
+[Commands] Loaded: ruletamesa
+[Commands] Loaded: slots
+[Commands] Loaded: startanuncios
+[Commands] Loaded: stopanuncios
+[Commands] Loaded: topganadores
+[Commands] Loaded: transacciones
+[Events] Loaded: interactionCreate
+[Events] Loaded: clientReady
+[Error] DISCORD_BOT_TOKEN not found
+[Info] Please set the DISCORD_BOT_TOKEN secret in Replit
+[Info] 1. Go to Discord Developer Portal: https://discord.com/developers/applications
+[Info] 2. Create or select your application
+[Info] 3. Go to Bot section and copy the token
+[Info] 4. Add it as a secret named DISCORD_BOT_TOKEN in Replit

@@ -1,0 +1,181 @@
+Quiero que desarrolles un **sistema de BLACKJACK completo, totalmente funcional y profesional**, integrado a mi bot del *Emerald Isle Casino ®*.
+El bot usa:
+
+* **Discord.js v14**
+* **SQLite**
+* **Embeds con estilo de casino**
+* **Botones interactivos**
+* **Sistema de economía ya existente**
+* **Comandos administrativos que NO muestran el mensaje del usuario, solo el embed final**
+
+Quiero el **módulo entero**, perfectamente estructurado, optimizado y modular.
+
+---
+
+# 🟩 **1. COMANDO PRINCIPAL**
+
+### `/blackjack`
+
+Debe abrir un **menú interactivo** con:
+
+* ➕ Aumentar apuesta
+* ➖ Reducir apuesta
+* 🂠 Repartir / Iniciar
+* 🔙 Volver al menú principal del casino
+
+El menú debe mostrarse siempre como un embed elegante con marca:
+
+**Emerald Isle Casino ®**
+Logo: **[https://i.imgur.com/cx5F2z7.png](https://i.imgur.com/cx5F2z7.png)**
+
+---
+
+# 🟫 **2. ESTILO VISUAL OBLIGATORIO**
+
+Usa un estilo premium:
+
+* Colores verde esmeralda y dorado
+* Cartas grandes (emojis o diseño textual)
+* Borde dorado
+* Tipografía limpia
+* Títulos claros en español:
+
+  * **TUS CARTAS**
+  * **CARTAS DE LA BANCA**
+  * **VALOR TOTAL**
+  * **APUESTA**
+  * **DECISIÓN**
+
+El embed debe actualizarse siempre con animaciones y transiciones suaves (delays 300–500 ms).
+
+---
+
+# 🟥 **3. SISTEMA DE CARTAS (EN ESPAÑOL)**
+
+El sistema debe usar una baraja de 52 cartas con representación clara en español:
+
+* Palo: ♥️ **corazones**, ♦️ **diamantes**, ♣️ **tréboles**, ♠️ **picas**
+* Números: del 2 al 10
+* Figuras: J (**Jota**), Q (**Reina**), K (**Rey**)
+* As (**A**) con valor 1 u 11
+
+Reglas obligatorias:
+
+* Identificar un **Blackjack Natural** (A + 10 o figura)
+* Ajustar automáticamente los Ases según convenga
+* Calcular siempre el valor total de la mano en español:
+  Ejemplo: *“Total: 18 puntos”*
+
+---
+
+# 🟦 **4. ANIMACIÓN DE REPARTO**
+
+El inicio del juego debe tener una animación:
+
+1. Embed: “Repartiendo cartas…”
+2. Mostrar carta 1 del jugador
+3. Mostrar carta 1 de la banca
+4. Mostrar carta 2 del jugador
+5. Mostrar carta 2 de la banca (oculta como 🂠)
+
+Cada revelación debe actualizar el embed.
+
+---
+
+# 🟧 **5. BOTONES DURANTE LA PARTIDA**
+
+Cuando comienza la ronda, aparecen botones en español:
+
+* ✋ **Quedarse**
+* ➕ **Pedir carta**
+* 🎲 **Doblar apuesta** (solo al inicio)
+* 🃏 **Dividir** (solo si las dos cartas son iguales)
+* 🏳️ **Rendirse** (pierde la mitad de la apuesta)
+* ❌ **Salir**
+
+Todos los botones deben actualizar el embed, no enviar mensajes nuevos.
+
+---
+
+# 🟩 **6. LÓGICA COMPLETA DEL BLACKJACK**
+
+### ➕ **Pedir**
+
+* Añade carta al jugador
+* Si supera 21 → “Te has pasado. Pierdes esta ronda.”
+
+### ✋ **Quedarse**
+
+* La banca revela su carta oculta
+* La banca juega siguiendo reglas reales:
+
+  * Pide con 16 o menos
+  * Se queda con 17 o más
+* Calcular quién gana
+
+### 🎲 **Doblar**
+
+* Duplica apuesta (si tiene balance)
+* Recibe solo una carta
+* Automáticamente se queda
+
+### 🃏 **Dividir**
+
+* Crea dos manos separadas
+* Juega mano 1
+* Luego mano 2
+* La banca juega al final contra ambas
+
+### 🏳️ **Rendirse**
+
+* Jugador pierde solo 50% de la apuesta
+* La ronda termina
+
+### 🃏 **Blackjack Natural**
+
+* Paga **1.5×** la apuesta
+* Solo si la banca no tiene blackjack
+* Mostrar mensaje:
+  *“¡Blackjack! Ganaste 1.5× tu apuesta.”*
+
+---
+
+# 🟨 **7. SISTEMA DE APUESTAS**
+
+* Descontar la apuesta al iniciar la ronda
+* Si apuesta > balance → bloquear
+* Si gana, depositar al balance
+* Si pierde, registrar en fondos de la casa
+* Todo debe manejarse con el sistema económico ya existente
+
+---
+
+# 🟥 **8. SEGURIDAD Y CONTROL**
+
+* Un único Blackjack por usuario activo
+* Tiempo máximo de inactividad: **90 segundos**
+* Cancelar automáticamente si no interactúa
+* Solo permitir botones del jugador dueño de la mesa
+* NO mostrar nunca mensajes del usuario
+
+---
+
+# 🟫 **9. MODULARIDAD DEL CÓDIGO**
+
+Modula de manera perfecta todo 
+
+---
+
+# 🟩 **10. RESULTADO FINAL ESPERADO**
+
+Quiero un sistema:
+
+* Atractivo
+* Rápido
+* Animado
+* 100% en español
+* Fácil de usar
+* Visualmente elegante
+* Con lógica real de Blackjack
+* Integrado al ecosistema del casino
+* Usando solo embeds y botones
